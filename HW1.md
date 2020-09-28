@@ -3,7 +3,7 @@
 2.4
 (c)
 
-$`\begin{aligned}
+$$\begin{aligned}
     &\bold{dict0} \rightarrow A|B|... \qquad 省略号中包含除了*以外该语言的所有字符 \\
     &\bold{dict1} \rightarrow A|B|... \qquad 省略号中包含除了*和/以外该语言的所有字符 \\
     &\bold{string0} \rightarrow *^{+} \bold{dict1} \bold{dict0}^{*} \qquad \bold{string0}为当字符串中有/和*时构造的约束(不允许出现*/) \\
@@ -11,18 +11,18 @@ $`\begin{aligned}
     &确保/**/中的字符的串四种情况:是否以*开头，以及是否以*结尾 \\
     &以*开头:\bold{string0}中的*^{+};不以*开头:\bold{annotation}中的\bold{dict0}^{*} \\
     &以*结尾:\bold{annotation}中的*^{*};不以*结尾:\bold{string0}中的\bold{dict0}^{*} \\
-\end{aligned}`$
+\end{aligned}$$
 
 (d)
 
-$`\begin{aligned}
+$\begin{aligned}
     &\bold{no\_1-9} \rightarrow 0 \\
     &\bold{no\_1-9}表示所有不含[1-9]中数字,且相邻数字都不同的非空串(其余以此类推) \\
     &\bold{no\_2-9} \rightarrow 1 \quad | \quad \bold{no\_1-9} \quad | \quad 1?(\bold{no\_1-9} \quad 1)^{+} \bold{no\_1-9}? \\
     &\bold{no\_2-9}从1,\bold{no\_1-9},以及新构造的串中选择 \\
     &新构造的串有4种情况,是否以1开头以及是否以1结尾 \\
     &其余情况以此类推 \\
-\end{aligned}`$
+\end{aligned}$
 
 $`\begin{aligned}
     &\bold{no\_3-9} \rightarrow 2 \quad | \quad \bold{no\_2-9} \quad | \quad 2?(\bold{no\_2-9} \quad 2)^{+} \bold{no\_2-9}? \\
